@@ -31,3 +31,27 @@ def trig_function(operation, angle):
         return math.tan(radians)
     else:
         return "Error: Invalid trigonometric function."
+
+def get_number(prompt):
+    while True:
+        try:
+            return float(input(prompt))
+        except ValueError:
+            print("Invalid input. Please enter a valid number.")
+
+def calculator():
+    history = []
+    
+    while True:
+        print("\nSelect an operation:")
+        print("1. Addition (+)")
+        print("2. Subtraction (-)")
+        print("3. Multiplication (*)")
+        print("4. Division (/)")
+        print("5. Exponentiation (^)")
+        print("6. Square Root (√)")
+        print("7. Trigonometric Functions (sin, cos, tan)")
+        print("8. View History")
+        print("9. Exit")
+        
+        choice = input("Enter your choice: ")
