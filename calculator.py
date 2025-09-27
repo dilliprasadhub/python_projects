@@ -55,3 +55,56 @@ def calculator():
         print("9. Exit")
         
         choice = input("Enter your choice: ")
+        if choice == '9':
+            print("Exiting calculator. Goodbye!")
+            break
+        
+        elif choice == '8':
+            print("Calculation History:")
+            for entry in history:
+                print(entry)
+            continue
+        
+        elif choice in ['1', '2', '3', '4', '5']:
+            num1 = get_number("Enter first number: ")
+            num2 = get_number("Enter second number: ")
+            
+            if choice == '1':
+                result = add(num1, num2)
+                operation = f"{num1} + {num2} = {result}"
+            elif choice == '2':
+                result = subtract(num1, num2)
+                operation = f"{num1} - {num2} = {result}"
+            elif choice == '3':
+                result = multiply(num1, num2)
+                operation = f"{num1} * {num2} = {result}"
+            elif choice == '4':
+                result = divide(num1, num2)
+                operation = f"{num1} / {num2} = {result}"
+            elif choice == '5':
+                result = exponentiate(num1, num2)
+                operation = f"{num1} ^ {num2} = {result}"
+            
+        elif choice == '6':
+            num = get_number("Enter a number: ")
+            result = square_root(num)
+            operation = f"√{num} = {result}"
+        
+        elif choice == '7':
+            func = input("Enter function (sin, cos, tan): ")
+            angle = get_number("Enter angle in degrees: ")
+            result = trig_function(func, angle)
+            operation = f"{func}({angle}°) = {result}"
+        
+        else:
+            print("Invalid choice. Please try again.")
+            continue
+        
+        print("Result:", result)
+        history.append(operation)
+        
+if __name__ == "__main__":
+    calculator()
+
+
+    
