@@ -21,3 +21,13 @@ def square_root(a):
     if a < 0:
         return "Error: Square root of a negative number is not defined."
     return math.sqrt(a)
+def trig_function(operation, angle):
+    radians = math.radians(angle)
+    if operation == "sin":
+        return math.sin(radians)
+    elif operation == "cos":
+        return math.cos(radians)
+    elif operation == "tan":
+        return math.tan(radians)
+    else:
+        return "Error: Invalid trigonometric function."
