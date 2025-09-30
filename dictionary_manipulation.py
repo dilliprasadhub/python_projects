@@ -21,3 +21,7 @@ for student, grades in student_grades.items():
 print("Original grades dictionary:")
 for student, grades in student_grades.items():
     print(f"{student}: {grades}")
+
+print("\nAverage grades dictionary:")
+for student, average in average_grades.items():
+    print(f"{student}: {average}")
